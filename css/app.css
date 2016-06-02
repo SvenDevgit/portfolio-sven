@@ -75,16 +75,21 @@ canvas {
   text-align: center;
   font-size: 3rem;
   color:  #31455d;
-  background-color: #52b939;
+  background-color: #C8C8C8;
 }
 
 #contact-text, #about-me-text {
   text-align: center;
-  font-size: 3rem;
+  font-size: 1.5rem;
   color:  #31455d;
 }
 
-.projects1 li, .projects2 li, .projects3 li{
+ul li {
+ padding-right: 2rem; 
+ padding-bottom: 2rem;
+}
+
+.projects li {
     display: inline-block;
 }
 

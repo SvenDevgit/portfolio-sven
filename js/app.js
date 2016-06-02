@@ -116,7 +116,7 @@ var board2 = {
    value: null,
    column : 1,
    row : 1,
-   color: '#3D4F68' //'#F5D452' //'#FF0000'
+   color: '#ECECEC' //'#3D4F68' //'#F5D452' //'#FF0000'
             }    
 }
 
@@ -129,10 +129,70 @@ var board3 = {
    value: null,
    column : 1,
    row : 1,
-   color: '#3D4F68' //'#F5D452' //'#FF0000'
+   color: '#ECECEC' //'#3D4F68' //'#F5D452' //'#FF0000'
             }    
 }
 
+var portfolioContext = {
+    portfolio: [
+      { name : 'about-me',
+        href : 'https://svendevgit.github.io/about-me-page/index.html',
+        alt  : 'About me Page',
+        imageUrl: 'images/about-me-page.png',
+        width: '370',
+        height: '220',
+        target: '_blank'
+      },
+      { name : 'karma-landing',
+        href : 'https://svendevgit.github.io/landingpage-clone/index.html',
+        alt  : 'Karma Landing Page',
+        imageUrl: 'images/karma-landing-page.png',
+        width: '370',
+        height: '220',
+        target: '_blank'
+      },
+      { name : 'quiz-app',
+        href : 'https://svendevgit.github.io/quiz-app/index.html',
+        alt  : 'Quiz App',
+        imageUrl: 'images/quiz-app.png',
+        width: '370',
+        height: '220',
+        target: '_blank'
+      },
+      { name : 'shopping-list',
+        href : 'https://svendevgit.github.io/shopping-list/main.html',
+        alt  : 'Shopping shopping-list',
+        imageUrl: 'images/shopping-list.png',
+        width: '370',
+        height: '220',
+        target: '_blank'        
+      },
+      { name : 'streetfighter',
+        href : 'https://svendevgit.github.io/jquery-streetfighter/main.html',
+        alt  : 'Streetfighter',
+        imageUrl: 'images/streetfighter.png',
+        width: '370',
+        height: '220',
+        target: '_blank'        
+      },
+      { name : 'tic-tac-toe',
+        href : 'https://svendevgit.github.io/tic-tac-toe/index.html',
+        alt  : 'Tic Tac Toe',
+        imageUrl: 'images/tic-tac-toe2.png',
+        width: '370',
+        height: '220',
+        target: '_blank'       
+      },
+      { name : 'api-hack',
+        href : 'https://svendevgit.github.io/api-hack/index.html' ,
+        alt  : 'API Hack',
+        imageUrl: 'images/census-api.png',
+        width: '370',
+        height: '220',
+        target: '_blank'       
+      }
+    ]
+};
 
 $(function(){
 	console.log('ready to go');
@@ -151,8 +211,21 @@ $(function(){
       page = '.navigation';
       $("html, body").animate({ scrollTop: parseInt( $(page).position().top ) }, 1000);   
     });
+
     colorCanvasShapes();
     setSquareText();
+    //
+    // load the template script
+    templateScript = $('#fill-portfolio').html();
+    //console.log(templateScript);
+    // Compile the template
+    template = Handlebars.compile(templateScript);
+    // Pass our data to the template
+    compiledHtml = template(portfolioContext);
+    //console.log(theCompiledHtml);
+    // Add the compiled html to the page
+    $('.projects').html(compiledHtml);
+
 });
 
 function doClick(square){
@@ -237,6 +310,7 @@ function setSquareText(){
   ctx.fillText('portfolio',670,110);
   ctx.fillText('about me',800,380);
   ctx.fillText('contact',950,200);
+  ctx.fillStyle = '#C8C8C8';
   ctx.font = '7rem Arial';
   ctx.fillText('sven lambeck',0,465);
 }
