@@ -68,12 +68,21 @@ canvas {
 
 #port-header, 
 #about-me-header, 
-#contact-header,
+#contact-header{
+  text-align: center;
+  font-size: 3rem;
+  color:  #31455d;
+  background-color: #C8C8C8;
+}
+
 #home1,
 #home2,
 #home3 {
   text-align: center;
-  font-size: 3rem;
+  margin-top: 3rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  font-size: 1.9rem;
   color:  #31455d;
   background-color: #C8C8C8;
 }
