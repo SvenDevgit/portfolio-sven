@@ -190,6 +190,14 @@ var portfolioContext = {
         width: '370',
         height: '220',
         target: '_blank'       
+      },
+      { name : 'pop-vis-svg',
+        href : 'https://svendevgit.github.io/population-visualizer-barchart/index.html' ,
+        alt  : 'Population Visualisation SVG',
+        imageUrl: 'images/pop-vis-svg.png',
+        width: '370',
+        height: '220',
+        target: '_blank'       
       }
     ]
 };
@@ -306,12 +314,12 @@ function colorSquare(square, addX, addY){
 
 function setSquareText(){
   ctx.fillStyle = '#ECECEC';
-  ctx.font = '2.5rem Arial';
+  ctx.font = '2.5rem serif';
   ctx.fillText('portfolio',670,110);
   ctx.fillText('about me',800,380);
   ctx.fillText('contact',950,200);
   ctx.fillStyle = '#C8C8C8';
-  ctx.font = '7rem Arial';
+  ctx.font = '7rem serif';
   ctx.fillText('sven lambeck',0,465);
 }
 
