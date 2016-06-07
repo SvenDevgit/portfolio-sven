@@ -219,6 +219,18 @@ $(function(){
       page = '.navigation';
       $("html, body").animate({ scrollTop: parseInt( $(page).position().top ) }, 1000);   
     });
+    $('.portfolio').on('click', function(event){ 
+      page = '#portfolio-section';
+      $("html, body").animate({ scrollTop: parseInt( $(page).position().top ) }, 1000);   
+    });
+    $('.contact').on('click', function(event){ 
+      page = '#contact-section';
+      $("html, body").animate({ scrollTop: parseInt( $(page).position().top ) }, 1000);   
+    });
+    $('.aboutme').on('click', function(event){ 
+      page = '#about-me-section';
+      $("html, body").animate({ scrollTop: parseInt( $(page).position().top ) }, 1000);   
+    });
 
     colorCanvasShapes();
     setSquareText();
